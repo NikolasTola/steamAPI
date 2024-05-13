@@ -16,6 +16,7 @@ async function tempo(request, response) {
       response.json({
         date: dynamicDate.toGMTString(),
         nome: nome,
+        resposta: steamResponseJSON,
         teste: 'É o tola'
       })
 
