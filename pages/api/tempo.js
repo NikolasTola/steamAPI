@@ -3,8 +3,8 @@ var cors = require('cors')
 var app = express()
  
 app.use((req, res, next) =>{
-  res.header('origin', '*');
-  res.header('methods', 'GET');
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET', 'PUT');
 
   app.use(cors());
 
