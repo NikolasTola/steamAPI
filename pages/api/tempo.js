@@ -17,7 +17,7 @@ app.get('/products/:id', cors(corsOptions), function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for a whitelisted domain.'})
 })
  
-app.listen(5500, function () {
+app.listen(80, function () {
   console.log('CORS-enabled web server listening on port 80')
 })
 
