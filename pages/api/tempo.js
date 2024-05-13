@@ -13,7 +13,7 @@ var corsOptions = {
   }
 }
  
-app.get('/products/:id', cors(corsOptions), function (req, res, next) {
+app.get('/api/tempo', cors(corsOptions), function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for a whitelisted domain.'})
 })
  
