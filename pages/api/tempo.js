@@ -1,6 +1,6 @@
 const cors = require('cors');
 
-cors.header("Access-Control-Allow-Origin", "*");
+cors.header("origin", "*");
 cors.header("Access-Control-Allow-Methods", "GET");
 
 cors();
