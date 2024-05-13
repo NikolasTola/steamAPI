@@ -1,6 +1,7 @@
 var express = require('express')
 var cors = require('cors')
 var app = express()
+console.log('teste');
  
 console.log(cors);
 console.log(cors.origin)
