@@ -15,7 +15,8 @@ async function tempo(request, response) {
 
       response.json({
         date: dynamicDate.toGMTString(),
-        nome: nome
+        nome: nome,
+        teste: 'É o tola'
       })
 
 }
