@@ -11,15 +11,14 @@ async function tempo(request, response) {
 
       const steamResponse = await fetch("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=2627FEB2EFFCED8437F659EB577291EE&steamids=76561198841564068");
       const steamResponseJSON = await steamResponse.json();
-      const nome = steamResponseJSON.response.players;
+      const nome = steamResponseJSON.response.players[0].personaname;
 
       response.json({
         date: dynamicDate.toGMTString(),
         nome: nome,
         resposta: steamResponseJSON,
         teste: 'É o tola'
-      })
-
+      });
 }
 
 export default tempo;
