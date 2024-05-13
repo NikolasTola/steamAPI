@@ -2,7 +2,7 @@ var express = require('express')
 var cors = require('cors')
 var app = express()
  
-var whitelist = 'orange-wall.vercel.app';
+var whitelist = 'https://orange-wall.vercel.app/';
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
