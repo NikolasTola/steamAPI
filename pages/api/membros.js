@@ -54,7 +54,7 @@ const membros = [
         nome: 'Rúbia',
         id: '76561198318749985',
         aniversario: '02/03',
-        email: '----'
+        email: 'rubia.a.m.souza@gmail.com'
     }
 ];
 
