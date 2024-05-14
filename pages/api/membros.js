@@ -22,27 +22,39 @@ const accessKey = process.env.ACCESS_KEY_SECRET;
 const membros = [
     {
         nome: 'Brandão',
-        id: '76561198881983017'
+        id: '76561198881983017',
+        aniversario: '02/09',
+        email: 'gabriel.silva.brandao7@gmail.com'
     },
     {
         nome: 'Dolly',
-        id: '76561198441453389'
+        id: '76561198441453389',
+        aniversario: '10/11',
+        email: 'vigasife@gmail.com'
     },
     {
         nome: 'Nikolas',
-        id: '76561198841564068'
+        id: '76561198841564068',
+        aniversario: '02/12',
+        email: 'nikolas.victor2@gmail.com'
     },
     {
         nome: 'Osmar',
-        id: '76561198375973490'
+        id: '76561198375973490',
+        aniversario: '25/11',
+        email: 'osmarcoelho25.oc@gmail.com'
     },
     {
         nome: 'Pedro',
-        id: '76561198328504635'
+        id: '76561198328504635',
+        aniversario: '13/01',
+        email: 'ppagbpedro@gmail.com'
     },
     {
         nome: 'Rúbia',
-        id: '76561198318749985'
+        id: '76561198318749985',
+        aniversario: '02/03',
+        email: '----'
     }
 ];
 
@@ -57,6 +69,9 @@ for (let i = 0; i < membros.length; i++) {
 
     membrosDados[i] = steamResponseJSON.response.players[0];
     membrosDados[i].nome = membros[i].nome;
+    membrosDados[i].email = membros[i].email;
+    membrosDados[i].aniversario = membros[i].aniversario;
+
 }
 
 // Resposta da API
