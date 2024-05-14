@@ -56,7 +56,7 @@ for (let i = 0; i < membros.length; i++) {
     var steamResponseJSON = await steamResponse.json();
 
     membrosDados[i] = steamResponseJSON.response.players[0];
-    
+    membrosDados[i].nome = membros[i].nome;
 }
 
 // Resposta da API
