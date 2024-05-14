@@ -48,15 +48,20 @@ const membros = [
 
 var membrosDados = [];
 
-const steamResponse = await fetch(`https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=${accessKey}&steamids=76561198841564068`);
-const steamResponseJSON = await steamResponse.json();
-const nome = steamResponseJSON.response.players[0].personaname;
+for (let i = 0; i < membros.length; i++) {
+
+    let id = membros[i].id;
+
+    var steamResponse = await fetch(`https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=${accessKey}&steamids=${id}`);
+    var steamResponseJSON = await steamResponse.json();
+
+    membrosDados[i] = steamResponseJSON.response.players[0];
+    
+}
 
 // Resposta da API
 res.json({
-     nome: nome,
-     resposta: steamResponseJSON,
-     teste: 'É o tola'
+     dados: membrosDados
    });
 }
 
