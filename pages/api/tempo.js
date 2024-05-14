@@ -30,4 +30,4 @@ async function tempo(request, response) {
       });
 }
 
-export default tempo;
+export default handler;
