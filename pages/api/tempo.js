@@ -1,10 +1,19 @@
-/*const cors = require('cors');
+import NextCors from 'nextjs-cors';
 
-cors.header("origin", "*");
-cors.header("Access-Control-Allow-Methods", "GET");
+async function handler(req, res) {
+   // Run the cors middleware
+   // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
+   await NextCors(req, res, {
+      // Options
+      methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+      origin: '*',
+      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+   });
 
-cors();
-console.log('TESTE');*/
+   // Rest of the API logic
+   res.json({ message: 'Hello NextJs Cors!' });
+}
+
 
 async function tempo(request, response) {
       const dynamicDate = new Date();
