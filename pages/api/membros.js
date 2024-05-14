@@ -47,15 +47,15 @@ const membros = [
 ];
 
 var membrosDados = [];
-
+*/
 const steamResponse = await fetch("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=2627FEB2EFFCED8437F659EB577291EE&steamids=76561198841564068");
 const steamResponseJSON = await steamResponse.json();
 const nome = steamResponseJSON.response.players[0].personaname;
-*/
+
 // Resposta da API
 res.json({
-     //nome: nome,
-     //resposta: steamResponseJSON,
+     nome: nome,
+     resposta: steamResponseJSON,
      teste: 'É o tola'
    });
 }
