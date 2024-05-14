@@ -18,7 +18,7 @@ async function handler(req, res) {
 // Rúbia:   76561198318749985 V
 
 const accessKey = process.env.ACCESS_KEY_SECRET;
-
+*/
 const membros = [
     {
         nome: 'Brandão',
@@ -47,7 +47,7 @@ const membros = [
 ];
 
 var membrosDados = [];
-*/
+
 const steamResponse = await fetch("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=2627FEB2EFFCED8437F659EB577291EE&steamids=76561198841564068");
 const steamResponseJSON = await steamResponse.json();
 const nome = steamResponseJSON.response.players[0].personaname;
