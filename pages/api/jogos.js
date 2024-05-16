@@ -51,7 +51,7 @@ async function carregaJogos(req, res) {
 
    let listaMeusJogos = steamResponseJSON.response.games;
 
-   lista_ids[i].nome = listaMembros[i].nome;
+   //lista_ids[i].nome = listaMembros[i].nome;
  
   // lista_ids[i].nome = listaMembros[i].nome;
 
