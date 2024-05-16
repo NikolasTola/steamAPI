@@ -42,14 +42,17 @@ const listaMembros = [
 var lista_jogosID = []
 
 for (let i = 0; i < listaMembros.length; i++) {
+
    var id = listaMembros[i].id;
 
-   var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id}&format=json`);
-   //var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068&format=json`);
+   var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id}`);
+   //var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068`);
 
    var steamResponseJSON = await steamResponse.json();
 
    //lista_jogosID[i].nome = listaMembros.nome;
+
+   lista_jogosID[i].nome = 'ZECA';
 }
    
 
