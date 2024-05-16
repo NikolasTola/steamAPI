@@ -35,7 +35,7 @@ const listaMembros = [
    },
    {
       nome: 'Rúbia',
-      id: '76561198318749985'
+      id: '76561198841564068'//'76561198318749985'
    }
 ];
 
@@ -59,13 +59,13 @@ for (let i = 0; i < listaMembros.length; i++) {
 }
    
 jogosID[indice] = steamResponseJSON;
-//jogosID[indice].nome = 'ZECA';
+jogosID[indice].nome = 'ZECA';
    
 
 // Resposta da API
 res.json({
-      id: jogosID,
-      dados: steamResponseJSON   
+      id: jogosID
+      //dados: steamResponseJSON   
    });
 }
 
