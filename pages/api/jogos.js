@@ -12,7 +12,7 @@ async function carregaJogos(req, res) {
 
 const chaveAcesso = ACCESS_KEY_SECRET;
 
-var id = '76561198841564068';
+const id = '76561198841564068';
 
 var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${chaveAcesso}&steamid=${id}&format=json`);
 //var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068&format=json`);
