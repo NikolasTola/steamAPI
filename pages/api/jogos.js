@@ -53,9 +53,20 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
+   let ids = [];
+
+   for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
+      
+      ids[j] = teamResponseJSON.response.games[j].appid;
+      
+   }
+   
+   let arrayAux = [];
+
 
    let objAux = {
-      nome: listaMembros[i].nome
+      nome: listaMembros[i].nome,
+      idJogos: ids
    }
 
    //lista_jogosID[i].nome = listaMembros.nome;
