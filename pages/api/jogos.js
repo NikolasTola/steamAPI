@@ -74,7 +74,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
 // Resposta da API
 res.json({
-      teste: lista_ids,
+      teste: listaMembros,
       jogos: listaMeusJogos
    });
 }
