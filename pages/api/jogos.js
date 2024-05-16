@@ -66,10 +66,10 @@ async function carregaJogos(req, res) {
    //var steamResponseJSON = await steamResponse.json();
 
 
-
+console.log(listaMembros.length);
 // Resposta da API
 res.json({
-      jogos: listaMeusJogos
+      jogos: steamResponseJSON
    });
 }
 
