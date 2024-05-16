@@ -62,7 +62,11 @@ for (let i = 0; i < listaMembros.length; i++) {
       }
    ];
 
-   let ids = steamResponseJSON;
+   let ids = steamResponseJSON.response.games;
+
+   ids.array.forEach(elemento => {
+      console.log('teste');
+   });
 
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
