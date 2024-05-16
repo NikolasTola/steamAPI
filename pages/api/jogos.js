@@ -80,7 +80,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    let objAux = {
       nome: listaMembros[i].nome,
-      idJogos: ids
+      //idJogos: ids
    }
 
    //lista_jogosID[i].nome = listaMembros.nome;
