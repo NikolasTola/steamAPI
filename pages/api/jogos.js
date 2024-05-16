@@ -65,6 +65,7 @@ for (let i = 0; i < listaMembros.length; i++) {
    let ids = steamResponseJSON.response.games;
    
    console.log(ids);
+   console.log('teste');
 
    ids.array.forEach(elemento => {
       console.log('teste');
