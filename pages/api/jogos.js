@@ -53,7 +53,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   let ids = steamResponseJSON.response.games.length;
+   let ids = steamResponseJSON.response.games;
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
       
