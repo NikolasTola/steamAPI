@@ -40,11 +40,7 @@ const listaMembros = [
 ];
 
 let indice = 0;
-var jogosID = [
-   {
-      id: '0'
-   }
-];
+var jogosID = [{}];
 
 
 
@@ -57,13 +53,18 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
+
+   let objAux = {
+      nome: listaMembros[i].nome
+   }
+
    //lista_jogosID[i].nome = listaMembros.nome;
 
-   
+   jogosID[i] = objAux;
 }
    
 //jogosID[indice] = steamResponseJSON;
-jogosID[indice].nome = 'ZECA';
+//jogosID[indice].nome = 'ZECA';
    
 
 // Resposta da API
