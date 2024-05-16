@@ -40,7 +40,7 @@ const listaMembros = [
 ];
 
 let indice = 0;
-var jogosID = []
+var jogosID = [];
 jogosID[indice].nome = 'ZECA';
 
 for (let i = 0; i < listaMembros.length; i++) {
