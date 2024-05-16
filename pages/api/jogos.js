@@ -39,7 +39,7 @@ const listaMembros = [
    }
 ]
 
-const id = listaMembros[3].id;
+const id = listaMembros[2].id;
 
 var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id}&format=json`);
 //var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068&format=json`);
