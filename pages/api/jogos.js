@@ -12,7 +12,34 @@ async function carregaJogos(req, res) {
 
 const acessKey = process.env.ACCESS_KEY_SECRET;
 
-const id = '76561198841564068';
+const listaMembros = [
+   {
+      nome: 'Brandão',
+      id: '76561198881983017'
+   },
+   {
+      nome: 'Dolly',
+      id: '76561198441453389'
+   },
+   {
+      nome: 'Nikolas',
+      id: '76561198841564068'
+   },
+   {
+      nome: 'Osmar',
+      id: '76561198375973490'
+   },
+   {
+      nome: 'Pedro',
+      id: '76561198328504635'
+   },
+   {
+      nome: 'Rúbia',
+      id: '76561198318749985'
+   }
+]
+
+const id = listaMembros[3].id;
 
 var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id}&format=json`);
 var steamResponseJSON = await steamResponse.json();
