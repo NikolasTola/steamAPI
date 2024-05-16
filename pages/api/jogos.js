@@ -67,6 +67,7 @@ for (let i = 0; i < listaMembros.length; i++) {
    
    //console.log(ids);
    console.log('teste');
+   console.log('teste');
 
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
