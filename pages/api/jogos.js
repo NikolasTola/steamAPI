@@ -49,10 +49,10 @@ for (let i = 0; i < listaMembros.length; i++) {
    var id = listaMembros[0].id;
    var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${accessKey}&steamid=${id}&format=json`);
    var steamResponseJSON = await steamResponse.json();
+
+   var listaMeusJogos = steamResponseJSON.response.games;
 }
    
-
-   let listaMeusJogos = steamResponseJSON.response.games;
 
    //lista_ids[i].nome = listaMembros[i].nome;
  
