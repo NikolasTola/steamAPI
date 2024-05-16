@@ -49,7 +49,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   lista_jogosID[i].nome = listaMembros.nome;
+   //lista_jogosID[i].nome = listaMembros.nome;
 }
    
 
