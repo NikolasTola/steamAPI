@@ -41,7 +41,9 @@ const listaMembros = [
 
 let indice = 0;
 var jogosID = [];
-jogosID[indice].nome = 'ZECA';
+//jogosID[indice].nome = 'ZECA';
+
+jogosID[indice] = steamResponseJSON;
 
 for (let i = 0; i < listaMembros.length; i++) {
 
