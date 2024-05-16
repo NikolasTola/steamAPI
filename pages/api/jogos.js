@@ -39,6 +39,9 @@ const listaMembros = [
    }
 ];
 
+let indice = 0;
+var jogosID = [];
+
 
 
 for (let i = 0; i < listaMembros.length; i++) {
@@ -50,9 +53,13 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   jogosID[i] = steamResponseJSON;
-   jogosID[i].nome = listaMembros.nome;
+   //lista_jogosID[i].nome = listaMembros.nome;
+
+   
 }
+   
+jogosID[indice] = steamResponseJSON;
+//jogosID[indice].nome = 'ZECA';
    
 
 // Resposta da API
