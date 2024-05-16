@@ -55,11 +55,11 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    let ids = [''];
 
-   for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
+   /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
       
       //ids[j] = steamResponseJSON.response.games[j].appid;
       
-   }
+   }*/
    
    let arrayAux = [];
 
