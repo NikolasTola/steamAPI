@@ -44,7 +44,7 @@ async function carregaJogos(req, res) {
       jogos_id: []
   }];
 
-  for (let i = 0; i < listaMembros.length; i++) {
+ // for (let i = 0; i < listaMembros.length; i++) {
    let id = listaMembros[i].id;
    var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${accessKey}&steamid=${id}&format=json`);
    var steamResponseJSON = await steamResponse.json();
@@ -53,13 +53,13 @@ async function carregaJogos(req, res) {
 
    lista_ids[i].nome = listaMembros[i].nome;
 
-   for (let j = 0; j < listaMeusJogos.length; j++) {
+  /* for (let j = 0; j < listaMeusJogos.length; j++) {
       
       lista_ids[i].jogos_id[j] = listaMeusJogos[j].appid;
       
-   }
+   //}
 
-  }
+  }*/
    //var steamResponse = await fetch(`https://store.steampowered.com/api/appdetails/?appids=359550`);
    //var steamResponseJSON = await steamResponse.json();
 
@@ -67,7 +67,8 @@ async function carregaJogos(req, res) {
 
 // Resposta da API
 res.json({
-     dados: lista_ids
+      steamResponseJSON,
+      listaMeusJogos
    });
 }
 
