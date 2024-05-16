@@ -60,7 +60,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
 // Resposta da API
 res.json({
-      id: id,
+      id: jogosID,
       dados: steamResponseJSON   
    });
 }
