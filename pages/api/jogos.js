@@ -39,6 +39,8 @@ const listaMembros = [
    }
 ];
 
+var lista_jogosID = [];
+
 for (let i = 0; i < listaMembros.length; i++) {
    var id = listaMembros[i].id;
 
@@ -47,6 +49,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
    
+   lista_jogosID[i].nome = listaMembros[i].nome;
 }
    
 
