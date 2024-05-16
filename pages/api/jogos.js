@@ -39,7 +39,9 @@ const listaMembros = [
    }
 ];
 
+let indice = 0;
 var jogosID = []
+jogosID[indice].nome = 'ZECA';
 
 for (let i = 0; i < listaMembros.length; i++) {
 
@@ -52,7 +54,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    //lista_jogosID[i].nome = listaMembros.nome;
 
-   //lista_jogosID[i].nome = 'ZECA';
+   
 }
    
 
