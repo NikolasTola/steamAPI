@@ -10,7 +10,7 @@ async function carregaJogos(req, res) {
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 });
 
-const acessKey = ACCESS_KEY_SECRET;
+const acessKey = process.env.ACCESS_KEY_SECRET;
 
 const id = '76561198841564068';
 
