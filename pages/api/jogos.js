@@ -1,6 +1,7 @@
 import NextCors from 'nextjs-cors';
 
 async function carregaJogos(req, res) {
+   console.log('teste');
    // Run the cors middleware
    // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
    await NextCors(req, res, {
@@ -66,10 +67,6 @@ for (let i = 0; i < listaMembros.length; i++) {
    
    console.log(ids);
    console.log('teste');
-
-   ids.array.forEach(elemento => {
-      console.log('teste');
-   });
 
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
