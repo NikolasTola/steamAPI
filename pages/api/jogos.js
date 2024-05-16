@@ -70,7 +70,6 @@ async function carregaJogos(req, res) {
 console.log(listaMembros.length);
 // Resposta da API
 res.json({
-      teste: lista_ids,
       jogos: listaMeusJogos
    });
 }
