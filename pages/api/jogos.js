@@ -57,7 +57,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
       
-      ids[j] = teamResponseJSON.response.games[j].appid;
+      ids[j] = steamResponseJSON.response.games[j].appid;
       
    }
    
