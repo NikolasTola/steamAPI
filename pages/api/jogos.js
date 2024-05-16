@@ -53,7 +53,16 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   let ids = steamResponseJSON.response.games;
+   let arrayAux = [
+      {
+         nome: '12',
+      },
+      {
+         nome: '13',
+      }
+   ];
+
+   let ids = typeof arrayAux;
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
       
@@ -61,7 +70,7 @@ for (let i = 0; i < listaMembros.length; i++) {
       
    }*/
    
-   let arrayAux = [];
+   
 
 
    let objAux = {
