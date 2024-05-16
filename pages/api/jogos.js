@@ -62,7 +62,7 @@ for (let i = 0; i < listaMembros.length; i++) {
       }
    ];
 
-   let ids = steamResponseJSON;
+   let ids = arrayAux[1];
 
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
