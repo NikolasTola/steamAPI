@@ -39,7 +39,7 @@ const listaMembros = [
    }
 ];
 
-var lista_jogosID = []
+var jogosID = []
 
 for (let i = 0; i < listaMembros.length; i++) {
 
@@ -52,7 +52,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    //lista_jogosID[i].nome = listaMembros.nome;
 
-   lista_jogosID[i].nome = 'ZECA';
+   //lista_jogosID[i].nome = 'ZECA';
 }
    
 
