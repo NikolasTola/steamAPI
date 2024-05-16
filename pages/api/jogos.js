@@ -44,7 +44,7 @@ async function carregaJogos(req, res) {
       jogos_id: []
   }];
 
-   var id = listaMembros[i].id;
+   var id = listaMembros[0].id;
    var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${accessKey}&steamid=${id}&format=json`);
    var steamResponseJSON = await steamResponse.json();
 
