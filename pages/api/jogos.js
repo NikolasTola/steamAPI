@@ -10,8 +10,6 @@ async function carregaJogos(req, res) {
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 });
 
-console.log('Testando Console');
-
 const acessKey = process.env.ACCESS_KEY_SECRET;
 
 const listaMembros = [
@@ -65,6 +63,8 @@ for (let i = 0; i < listaMembros.length; i++) {
    ];
 
    let ids = steamResponseJSON.response.games;
+
+   localStorage.setItem('Teste', id);
 
 
    /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
