@@ -39,12 +39,6 @@ const listaMembros = [
    }
 ];
 
-let indice = 0;
-var jogosID = [{}];
-
-
-
-for (let i = 0; i < listaMembros.length; i++) {
 
    var id = listaMembros[i].id;
 
@@ -53,38 +47,9 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   let arrayAux = [
-      {
-         nome: '12',
-      },
-      {
-         nome: '13',
-      }
-   ];
-
    let ids = steamResponseJSON.response.games;
 
-   /*for (let j = 0; j < steamResponseJSON.response.games.length; j++) {
-      
-      //ids[j] = steamResponseJSON.response.games[j].appid;
-      
-   }*/
-   
-   
 
-
-   let objAux = {
-      nome: listaMembros[i].nome,
-      idJogos: ids
-   }
-
-   //lista_jogosID[i].nome = listaMembros.nome;
-
-   jogosID[i] = objAux;
-}
-   
-//jogosID[indice] = steamResponseJSON;
-//jogosID[indice].nome = 'ZECA';
    
 // Resposta da API
 res.json({
