@@ -69,8 +69,8 @@ for (let i = 0; i < listaMembros.length; i++) {
       jogos_id[0] = 'Erro!'; 
    }
 
-   listaMembro_appId[i] = objAux;
    objAux.idJogos =jogos_id;
+   listaMembro_appId[i] = objAux;
 } 
 
 
