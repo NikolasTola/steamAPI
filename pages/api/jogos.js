@@ -1,15 +1,5 @@
 import NextCors from 'nextjs-cors';
 
-async function carregaJogos(req, res) {
-   // Run the cors middleware
-   // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
-   await NextCors(req, res, {
-      // Options
-      methods: ['GET'],
-      origin: '*',
-      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-});
-
 // PRIMEIRA PARTE:
 // Essa parte do código cria um objeto que possui o nome do membro e
 // um array com o id de todos os jogos desse membro.
@@ -83,6 +73,17 @@ for (let i = 0; i < listaMembros.length; i++) {
    objAux.idJogos =jogos_id;
 } 
 
+
+async function carregaJogos(req, res) {
+   // Run the cors middleware
+   // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
+   await NextCors(req, res, {
+      // Options
+      methods: ['GET'],
+      origin: '*',
+      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+});
+
 // SEGUNDA PARTE:
 
 //var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
@@ -96,30 +97,23 @@ var objetoAuxiliar = {
    jogos: []
 }
 
-      var id_api2 = '359550';
-
-      var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
-      //var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
-      var steamResponseJSON_2 = await steamResponse_2.json();
-      
-      var dados = steamResponseJSON_2[id_api2];
-
 for (let i = 0; i < listaMembro_appId.length; i++) {
 
    objetoAuxiliar.nome = listaMembros[i].nome
 
    for (let j = 0; j < listaMembro_appId[i].idJogos.length; j++) {
 
-      /*var id_api2 = listaMembro_appId[i].idJogos[j];
+      var id_api2 = listaMembro_appId[i].idJogos[j];
 
       var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
       //var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
       var steamResponseJSON_2 = await steamResponse_2.json();
       
-      var dados = steamResponseJSON_2[id_api2];*/
+      var dados = steamResponseJSON_2[id_api2];
       
    }
 }
+
 /*
 //for (let i = 0; i < listaMembro_appId.length; i++) {
 
@@ -184,7 +178,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      id: dados
+      id: dados.data.name
    });
 }
 
