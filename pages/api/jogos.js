@@ -109,8 +109,6 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
       //var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
       var steamResponseJSON_2 = await steamResponse_2.json();
       
-      var dados = steamResponseJSON_2[id_api2];
-      
    }
 }
 
@@ -178,7 +176,8 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      id: dados.data.name
+      teste1: listaMembro_appId[i].idJogos.length,
+      teste2: listaMembro_appId.length
    });
 }
 
