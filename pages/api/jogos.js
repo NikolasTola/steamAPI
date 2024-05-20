@@ -85,10 +85,6 @@ for (let i = 0; i < listaMembros.length; i++) {
 
 // SEGUNDA PARTE:
 
-//var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
-var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
-var steamResponseJSON_2 = await steamResponse_2.json();
-
 var listaJogosOW = [];
 
 var objetoAuxiliar = {
@@ -104,9 +100,9 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
       var id_api2 = listaMembro_appId[i].idJogos[j];
 
-      var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
+      /*var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
       //var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
-      var steamResponseJSON_2 = await steamResponse_2.json();
+      var steamResponseJSON_2 = await steamResponse_2.json();*/
       
       
       
