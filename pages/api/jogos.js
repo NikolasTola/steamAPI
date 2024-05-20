@@ -10,6 +10,11 @@ async function carregaJogos(req, res) {
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 });
 
+// PRIMEIRA PARTE:
+// Essa parte do código cria um objeto que possui o nome do membro e
+// um array com o id de todos os jogos desse membro.
+// Se o membro não tiver nenhum jogo ou estiver no modo "Visível só para amigos"
+// a lista de jogos apresentará "Erro!"
 const acessKey = process.env.ACCESS_KEY_SECRET;
 
 const listaMembros = [
@@ -43,25 +48,22 @@ var listaMembro_appId = [];
 
 for (let i = 0; i < listaMembros.length; i++) {
 
-   var id = listaMembros[i].id;
+   var id_api1 = listaMembros[i].id;
 
-   var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id}`);
-   //var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068`);
+   var steamResponse_1 = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id_api1}`);
+   //var steamResponse_1 = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068`);
 
-   var steamResponseJSON = await steamResponse.json();
+   var steamResponseJSON_1 = await steamResponse_1.json();
 
-   let objAux = {
-      nome: '',
-      idJogos: []
-   }
+   
 
-   var listaJogos_id = steamResponseJSON.response.games;
+   var listaJogos_id = steamResponseJSON_1.response.games;
 
    var jogos_id = [];
 
    objAux.nome = listaMembros[i].nome;
 
-   if(steamResponseJSON.response.games != undefined){
+   if(steamResponseJSON_1.response.games != undefined){
 
       for (let j = 0; j < listaJogos_id.length; j++) {
          
@@ -77,11 +79,74 @@ for (let i = 0; i < listaMembros.length; i++) {
    listaMembro_appId[i] = objAux;
    objAux.idJogos =jogos_id;
 } 
+
+// SEGUNDA PARTE:
+var listaJogosOW = [];
+
+for (let i = 0; i < listaMembro_appId.length; i++) {
+
+   let objAux = {
+      nome: '',
+      jogos: []
+   }
+
+   objAux.nome = listaMembros[i].nome;
+
+   for (let jogo = 0; jogo < listaMembro_appId.idJogos.length; jogo++) {
+      
+      var id_api2 = listaMembro_appId[i].idJogos[j];
+
+      var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
+      // var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=359550`);
+      var steamResponseJSON_2 = await steamResponse_2.json();
+
+      let dados = steamResponseJSON_2[id_api2].data;
+
+      let objeto_intermediario = {
+         nome: '',
+         id: '',
+         is_gratis: true,
+         suporta_controle: true,
+         imagem_1: '',
+         imagem_2: '',
+         link: '',
+         num_players: ''
+      }
+
+      objeto_intermediario.nome = dados.name;
+      objeto_intermediario.id = dados.steam_appid;
+      objeto_intermediario.is_gratis = dados.is_free;
+      objeto_intermediario.imagem_1 = dados.header_image;
+      objeto_intermediario.imagem_2 = dados.capsule_image;
+      objeto_intermediario.link = `https://store.steampowered.com/app/${id_api2}`;
+      
+      if(dados.controller_support != undefined){
+         objeto_intermediario.suporta_controle = true;
+      } else {
+         objeto_intermediario.suporta_controle = false;
+      }
+
+      let categorias = dados.categories;
+
+      categorias.forEach(categoria => {
+         
+         if(categoria.id = 2){
+            objeto_intermediario.num_players = categoria.description;
+         }
+
+         if (categoria.id = 1) {
+            objeto_intermediario.num_players = categoria.description;
+         }
+      });
+
+      listaJogosOW[i] = objeto_intermediario;
+   }
+}
+   
    
 // Resposta da API
 res.json({
-      id: listaMembro_appId
-      //dados: steamResponseJSON   
+      id: listaJogosOW
    });
 }
 
