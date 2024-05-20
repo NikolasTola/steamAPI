@@ -40,7 +40,7 @@ const listaMembros = [
 ];
 
 
-   var id = listaMembros[i].id;
+   var id = listaMembros[2].id;
 
    var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${acessKey}&steamid=${id}`);
    //var steamResponse = await fetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=2627FEB2EFFCED8437F659EB577291EE&steamid=76561198841564068`);
