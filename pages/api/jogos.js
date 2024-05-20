@@ -90,6 +90,13 @@ var objetoAuxiliar = {
    nome: '',
    jogos: []
 }
+
+for (let i = 0; i < listaMembro_appId.length; i++) {
+
+   objetoAuxiliar.nome = listaMembros[i].nome
+
+
+}
 /*
 //for (let i = 0; i < listaMembro_appId.length; i++) {
 
@@ -154,7 +161,7 @@ var objetoAuxiliar = {
 
 // Resposta da API
 res.json({
-      id: listaMembros
+      id: listaMembro_appId
    });
 }
 
