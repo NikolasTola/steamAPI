@@ -92,7 +92,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
    objAux.nome = listaMembros[i].nome;
 
-   for (let jogo = 0; jogo < listaMembro_appId[i].idJogos.length; jogo++) {
+   for (let j = 0; j < listaMembro_appId[i].idJogos.length; j++) {
       
       
 
