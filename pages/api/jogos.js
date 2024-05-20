@@ -91,7 +91,7 @@ var objetoAuxiliar = {
    jogos: []
 }
 
-for (let i = 0; i < 15; i++) {
+for (let i = 0; i < 150; i++) {
 
    //objetoAuxiliar.nome = listaMembros[i].nome
 
