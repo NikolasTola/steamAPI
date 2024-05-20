@@ -1,5 +1,15 @@
 import NextCors from 'nextjs-cors';
 
+async function carregaJogos(req, res) {
+   // Run the cors middleware
+   // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
+   await NextCors(req, res, {
+      // Options
+      methods: ['GET'],
+      origin: '*',
+      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+});
+
 // PRIMEIRA PARTE:
 // Essa parte do código cria um objeto que possui o nome do membro e
 // um array com o id de todos os jogos desse membro.
@@ -69,20 +79,9 @@ for (let i = 0; i < listaMembros.length; i++) {
       jogos_id[0] = 'Erro!'; 
    }
 
-   objAux.idJogos =jogos_id;
    listaMembro_appId[i] = objAux;
+   objAux.idJogos =jogos_id;
 } 
-
-
-async function carregaJogos(req, res) {
-   // Run the cors middleware
-   // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
-   await NextCors(req, res, {
-      // Options
-      methods: ['GET'],
-      origin: '*',
-      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-});
 
 // SEGUNDA PARTE:
 
@@ -111,7 +110,6 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
       
    }
 }
-
 /*
 //for (let i = 0; i < listaMembro_appId.length; i++) {
 
@@ -176,8 +174,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      teste1: listaMembro_appId[i].idJogos.length,
-      teste2: listaMembro_appId.length
+      id: dados
    });
 }
 
