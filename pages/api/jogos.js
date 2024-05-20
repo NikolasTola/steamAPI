@@ -1,5 +1,8 @@
 import NextCors from 'nextjs-cors';
 
+export const maxDuration = 60; // This function can run for a maximum of 5 seconds
+export const dynamic = 'force-dynamic';
+
 async function carregaJogos(req, res) {
    // Run the cors middleware
    // nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
