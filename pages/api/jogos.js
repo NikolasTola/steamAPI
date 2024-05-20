@@ -55,7 +55,10 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON_1 = await steamResponse_1.json();
 
-   
+   let objAux = {
+      nome: '',
+      idJogos: []
+   }
 
    var listaJogos_id = steamResponseJSON_1.response.games;
 
