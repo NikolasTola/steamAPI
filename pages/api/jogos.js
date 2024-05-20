@@ -85,12 +85,12 @@ var listaJogosOW = [];
 
 for (let i = 0; i < listaMembro_appId.length; i++) {
 
-   let objAux = {
+   var objetoAuxiliar = {
       nome: '',
       jogos: []
    }
 
-   objAux.nome = listaMembros[i].nome;
+   objetoAuxiliar.nome = listaMembros[i].nome;
 
    for (let j = 0; j < listaMembro_appId[i].idJogos.length; j++) {
       
