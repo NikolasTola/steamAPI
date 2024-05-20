@@ -101,9 +101,9 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
       var id_api2 = listaMembro_appId[i].idJogos[j];
 
-      /*var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
-      //var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
-      var steamResponseJSON_2 = await steamResponse_2.json();*/
+      //var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
+      var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
+      var steamResponseJSON_2 = await steamResponse_2.json();
       
    }
 }
@@ -171,7 +171,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      teste: id_api2
+      teste: steamResponseJSON_2
    });
 }
 
