@@ -102,9 +102,9 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
       // var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=359550`);
       var steamResponseJSON_2 = await steamResponse_2.json();
 
-      let dados = steamResponseJSON_2[id_api2].data;
+      var dados = steamResponseJSON_2[id_api2].data;
 
-      let objeto_intermediario = {
+      /*let objeto_intermediario = {
          nome: '',
          id: '',
          is_gratis: true,
@@ -141,7 +141,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
          }
       });
 
-      objAux.jogos[j] = objeto_intermediario;
+      objAux.jogos[j] = objeto_intermediario;*/
    }
 
    listaJogosOW[i] = objAux;
@@ -150,7 +150,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
    
 // Resposta da API
 res.json({
-      id: listaJogosOW
+      id: dados
    });
 }
 
