@@ -27,7 +27,7 @@ const listaMembros = [
    },
    {
       nome: 'Osmar',
-      id: '76561198375973490'
+      id: '76561198841564068'//'76561198375973490'
    },
    {
       nome: 'Pedro',
@@ -49,7 +49,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   let ids = steamResponseJSON.response.games;
+   var ids = steamResponseJSON.response.games.length;
 }
    
 // Resposta da API
