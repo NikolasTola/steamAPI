@@ -47,7 +47,7 @@ const listaMembros = [
 
    var steamResponseJSON = await steamResponse.json();
 
-   let ids = steamResponseJSON.response.games;
+   let ids = steamResponseJSON.response.games[0];
 
    
 // Resposta da API
