@@ -172,7 +172,13 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      id: listaMembro_appId
+      teste1: listaMembro_appId[0].idJogos.length,
+      teste2: listaMembro_appId[1].idJogos.length,
+      teste3: listaMembro_appId[2].idJogos.length,
+      teste4: listaMembro_appId[3].idJogos.length,
+      teste5: listaMembro_appId[4].idJogos.length,
+      teste6: listaMembro_appId[5].idJogos.length,
+      numeroMembros: listaMembro_appId.length
    });
 }
 
