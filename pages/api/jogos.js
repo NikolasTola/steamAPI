@@ -15,15 +15,15 @@ const acessKey = process.env.ACCESS_KEY_SECRET;
 const listaMembros = [
    {
       nome: 'Brandão',
-      id: '76561198375973490'//'76561198881983017'
+      id: '76561198881983017'
    },
    {
       nome: 'Dolly',
-      id: '76561198375973490'//'76561198441453389'
+      id: '76561198441453389'
    },
    {
       nome: 'Nikolas',
-      id: '76561198375973490'//'76561198841564068'
+      id: '76561198841564068'
    },
    {
       nome: 'Osmar',
@@ -31,11 +31,11 @@ const listaMembros = [
    },
    {
       nome: 'Pedro',
-      id: '76561198375973490'//'76561198328504635'
+      id: '76561198328504635'
    },
    {
       nome: 'Rúbia',
-      id: '76561198375973490'//'76561198318749985'
+      id: '76561198318749985'
    }
 ];
 
@@ -61,9 +61,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    objAux.nome = listaMembros[i].nome;
 
-   console.log(steamResponseJSON.response.games);
-
-/*if(steamResponseJSON.response.games){
+   if(steamResponseJSON.response.games != undefined){
 
       for (let j = 0; j < listaJogos_id.length; j++) {
          
@@ -71,10 +69,14 @@ for (let i = 0; i < listaMembros.length; i++) {
       }
 
       objAux.idJogos =jogos_id;
+   } else {
+
+      jogos_id[0] = 'Erro!'; 
    }
 
-   listaMembro_appId[i] = objAux;*/
-}
+   listaMembro_appId[i] = objAux;
+   objAux.idJogos =jogos_id;
+} 
    
 // Resposta da API
 res.json({
