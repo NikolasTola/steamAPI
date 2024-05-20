@@ -61,7 +61,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    objAux.nome = listaMembros[i].nome;
 
-   if(steamResponseJSON.response != {}){
+   if(steamResponseJSON.response != ''){
 
       for (let j = 0; j < listaJogos_id.length; j++) {
          
