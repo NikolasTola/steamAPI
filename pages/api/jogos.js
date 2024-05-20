@@ -103,6 +103,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
    for (let j = 0; j < listaMembro_appId[i].idJogos.length.length; j++) {
 
       var id_api2 = listaMembro_appId[i].idJogos[j];
+      console.log(id_api2);
 
       
 
