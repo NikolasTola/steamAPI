@@ -174,7 +174,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      id: listaMembro_appId[2]
+      id: listaMembro_appId[2].idJogos[4]
    });
 }
 
