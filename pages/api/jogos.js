@@ -91,9 +91,9 @@ var objetoAuxiliar = {
    jogos: []
 }
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 15; i++) {
 
-   objetoAuxiliar.nome = listaMembros[i].nome
+   //objetoAuxiliar.nome = listaMembros[i].nome
 
     var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=359550`);
     var steamResponseJSON_2 = await steamResponse_2.json();
