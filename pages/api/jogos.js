@@ -59,9 +59,9 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var jogos_id = [];
 
-   if(steamResponseJSON.response.games.length){
+   objAux.nome = listaMembros[i].nome;
 
-      objAux.nome = listaMembros[i].nome;
+   if(steamResponseJSON.response != {}){
 
       for (let j = 0; j < listaJogos_id.length; j++) {
          
