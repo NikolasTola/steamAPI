@@ -86,12 +86,12 @@ for (let i = 0; i < listaMembros.length; i++) {
 // SEGUNDA PARTE:
 var listaJogosOW = [];
 
-for (let i = 0; i < listaMembro_appId.length; i++) {
-
-   var objetoAuxiliar = {
-      nome: '',
-      jogos: []
-   }
+var objetoAuxiliar = {
+   nome: '',
+   jogos: []
+}
+/*
+//for (let i = 0; i < listaMembro_appId.length; i++) {
 
    objetoAuxiliar.nome = listaMembros[i].nome;
 
@@ -107,7 +107,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
       //var dados = steamResponseJSON_2[id_api2].data;
 
-      /*let objeto_intermediario = {
+      let objeto_intermediario = {
          nome: '',
          id: '',
          is_gratis: true,
@@ -144,16 +144,17 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
          }
       });
 
-      objAux.jogos[j] = objeto_intermediario;*/
+      objAux.jogos[j] = objeto_intermediario;
    }
 
    //listaJogosOW[i] = objAux;
-}
+//}
    
-   
+*/
+
 // Resposta da API
 res.json({
-      id: steamResponseJSON_2
+      id: listaMembros
    });
 }
 
