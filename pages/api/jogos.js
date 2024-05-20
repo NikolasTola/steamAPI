@@ -94,6 +94,8 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
    for (let jogo = 0; jogo < listaMembro_appId.idJogos.length; jogo++) {
       
+      
+
       var id_api2 = listaMembro_appId[i].idJogos[j];
 
       var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
@@ -139,8 +141,10 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
          }
       });
 
-      listaJogosOW[i] = objeto_intermediario;
+      objAux.jogos[j] = objeto_intermediario;
    }
+
+   listaJogosOW[i] = objAux;
 }
    
    
