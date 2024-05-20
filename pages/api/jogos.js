@@ -92,11 +92,7 @@ var objetoAuxiliar = {
    nome: '',
    jogos: []
 }
-
-
-var steamResponseJSON_2 = await steamResponse_2.json();
       
-
 for (let i = 0; i < listaMembro_appId.length; i++) {
 
    objetoAuxiliar.nome = listaMembros[i].nome
