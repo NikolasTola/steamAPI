@@ -61,7 +61,9 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    objAux.nome = listaMembros[i].nome;
 
-   if(steamResponseJSON.response != ''){
+   console.log(steamResponseJSON.response.games);
+
+/*if(steamResponseJSON.response.games){
 
       for (let j = 0; j < listaJogos_id.length; j++) {
          
@@ -71,7 +73,7 @@ for (let i = 0; i < listaMembros.length; i++) {
       objAux.idJogos =jogos_id;
    }
 
-   listaMembro_appId[i] = objAux;
+   listaMembro_appId[i] = objAux;*/
 }
    
 // Resposta da API
