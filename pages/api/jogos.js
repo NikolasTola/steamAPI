@@ -49,7 +49,6 @@ const listaMembros = [
 
    let ids = steamResponseJSON.response.games;
 
-//Teste
    
 // Resposta da API
 res.json({
