@@ -79,33 +79,29 @@ for (let i = 0; i < listaMembros.length; i++) {
       jogos_id[0] = 'Erro!'; 
    }
 
-   objAux.idJogos =jogos_id;
    listaMembro_appId[i] = objAux;
-   
+   objAux.idJogos =jogos_id;
 } 
 
 // SEGUNDA PARTE:
-
 var listaJogosOW = [];
 
 var objetoAuxiliar = {
    nome: '',
    jogos: []
 }
-      
+
 for (let i = 0; i < listaMembro_appId.length; i++) {
 
    objetoAuxiliar.nome = listaMembros[i].nome
 
    for (let j = 0; j < listaMembro_appId[i].idJogos.length; j++) {
-
       var id_api2 = listaMembro_appId[i].idJogos[j];
 
-      
       var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=${id_api2}`);
-      //var steamResponse_2 = await fetch('https://store.steampowered.com/api/appdetails/?appids=359550');
+      // var steamResponse_2 = await fetch(`https://store.steampowered.com/api/appdetails/?appids=359550`);
       var steamResponseJSON_2 = await steamResponse_2.json();
-      
+
    }
 }
 /*
@@ -172,7 +168,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      teste: steamResponseJSON_2
+      id: listaMembro_appId[2].idJogos.length
    });
 }
 
