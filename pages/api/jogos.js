@@ -95,7 +95,10 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
    objetoAuxiliar.nome = listaMembros[i].nome
 
-
+   for (let j = 0; j < listaMembro_appId[i].idJogos.length.length; j++) {
+      
+      
+   }
 }
 /*
 //for (let i = 0; i < listaMembro_appId.length; i++) {
@@ -161,7 +164,7 @@ for (let i = 0; i < listaMembro_appId.length; i++) {
 
 // Resposta da API
 res.json({
-      id: listaMembro_appId
+      id: listaMembro_appId[2].idJogos.length
    });
 }
 
