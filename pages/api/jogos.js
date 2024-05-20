@@ -39,6 +39,7 @@ const listaMembros = [
    }
 ];
 
+var listaMembro_appId = [];
 
 for (let i = 0; i < listaMembros.length; i++) {
 
@@ -49,12 +50,33 @@ for (let i = 0; i < listaMembros.length; i++) {
 
    var steamResponseJSON = await steamResponse.json();
 
-   var ids = steamResponseJSON.response.games.length;
+   let objAux = {
+      nome: '',
+      idJogos: []
+   }
+
+   var listaJogos_id = steamResponseJSON.response.games;
+
+   var jogos_id = [];
+
+   if(steamResponseJSON.response.games.length){
+
+      objAux.nome = listaMembros[i].nome;
+
+      for (let j = 0; j < listaJogos_id.length; j++) {
+         
+         jogos_id[j] = listaJogos_id[j].appid;
+      }
+
+      objAux.idJogos =jogos_id;
+   }
+
+   listaMembro_appId[i] = objAux;
 }
    
 // Resposta da API
 res.json({
-      id: ids
+      id: listaMembro_appId
       //dados: steamResponseJSON   
    });
 }
