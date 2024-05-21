@@ -87,6 +87,7 @@ for (let i = 0; i < listaMembros.length; i++) {
 } 
 
 // SEGUNDA PARTE:
+// Teste
 var listaJogosOW = [];
 
 var objetoAuxiliar = {
